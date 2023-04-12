@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/news_ui.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bookIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppRoutes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/BooksContextProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/BooksSearch.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/ManageBooks.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/components/AddBookCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/components/BookCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/components/BookDialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/components/BookDisplay.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/components/RatingStars/Rating.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/components/RatingStars/Star.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/components/ReadChip.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Header/components/HeaderLink.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PageContainers/PageContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PageLoading/PageLoading.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PageTitles/PageTitles.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Welcome/Welcome.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Router.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contexts/UserContext.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/theme/BookTheme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,8 +67,16 @@
       <workItem from="1681133831850" duration="50000" />
       <workItem from="1681133922406" duration="32843000" />
       <workItem from="1681233469943" duration="9070000" />
-      <workItem from="1681248803966" duration="34252000" />
+      <workItem from="1681248803966" duration="34434000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1681338725816</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681338725816</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
