@@ -16,6 +16,7 @@ interface IBooksContext {
   inUserList: (bookId: string) => IUserBook | undefined;
   updateStatus: (id: number, status: boolean) => void;
   updateRating: (id: number, newRating: number) => void;
+  isSearchLoading: boolean;
 }
 
 export const BooksContext = createContext<IBooksContext>({} as IBooksContext);
@@ -239,6 +240,7 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
         inUserList,
         updateStatus,
         updateRating,
+        isSearchLoading,
       }}
     >
       {children}

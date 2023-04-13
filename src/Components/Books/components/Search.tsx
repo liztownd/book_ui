@@ -1,6 +1,12 @@
-import React, { Dispatch, FormEventHandler, SetStateAction } from "react";
+import React, {
+  Dispatch,
+  FormEventHandler,
+  SetStateAction,
+  useContext,
+} from "react";
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
+import { BooksContext } from "../../../contexts/BooksContext";
 
 interface Props {
   onSubmit: FormEventHandler;
@@ -25,6 +31,7 @@ const Search: React.FunctionComponent<Props> = ({
   publisher,
   setPublisher,
 }) => {
+  const { isSearchLoading } = useContext(BooksContext);
   const { classes } = useStyles();
   return (
     <form onSubmit={(event) => onSubmit(event)}>
@@ -77,6 +84,7 @@ const Search: React.FunctionComponent<Props> = ({
       <Button
         title="Search"
         className={classes.searchButton}
+        disabled={isSearchLoading}
         type="submit"
         onClick={(event) => onSubmit(event)}
         variant={"contained"}

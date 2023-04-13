@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="update README, add images">
+    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="update search query, add book image fallback">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookDialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +73,7 @@
       <workItem from="1681133831850" duration="50000" />
       <workItem from="1681133922406" duration="32843000" />
       <workItem from="1681233469943" duration="9070000" />
-      <workItem from="1681248803966" duration="43485000" />
+      <workItem from="1681248803966" duration="43614000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681338725816</created>
@@ -119,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681351685525</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update search query, add book image fallback">
+      <created>1681393040354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681393040354</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +147,8 @@
     <MESSAGE value="update README" />
     <MESSAGE value="add html parser, missing key, update nav link design" />
     <MESSAGE value="update README, add images" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README, add images" />
+    <MESSAGE value="update search query, add book image fallback" />
+    <option name="LAST_COMMIT_MESSAGE" value="update search query, add book image fallback" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
