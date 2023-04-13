@@ -1,7 +1,7 @@
 {
-  "name": "book_ui",
+  "name": "mybookshelf",
   "homepage": "https://liztownd.github.io/mybookshelf",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.0.0",
