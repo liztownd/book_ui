@@ -1,6 +1,6 @@
 {
   "name": "book_ui",
-  "homepage": "https://github.com/liztownd/book_ui.git",
+  "homepage": "https://liztownd.github.io/mybookshelf",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
