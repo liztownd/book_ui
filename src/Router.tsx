@@ -18,7 +18,7 @@ const Router: FunctionComponent<Props> = () => {
     <Suspense fallback={<PageLoading />}>
       <BrowserRouter>
         <Routes>
-          <Route path={"/"} element={<Welcome />} />
+          <Route path={"/mybookshelf/"} element={<Welcome />} />
           <Route
             path={`${AppRouteBooks.path}`}
             element={<BooksContextProvider />}

@@ -4,15 +4,15 @@ export type AppRouteParams = {
 
 export const AppRouteBooks = {
   title: `Book search`,
-  path: `/books/:userId`,
+  path: `/mybookshelf/books/:userId`,
 };
 
 export const AppRouteBooksSearch = {
   title: `Book search`,
-  path: `/books/:userId/search`,
+  path: `/mybookshelf/books/:userId/search`,
 };
 
 export const AppRouteManageBooks = {
   title: `My books`,
-  path: `/books/:userId/manage`,
+  path: `/mybookshelf/books/:userId/manage`,
 };

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="add search progress indicator">
+    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="oops and package-lock">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +13,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="gh-pages" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -73,7 +79,7 @@
       <workItem from="1681133831850" duration="50000" />
       <workItem from="1681133922406" duration="32843000" />
       <workItem from="1681233469943" duration="9070000" />
-      <workItem from="1681248803966" duration="44424000" />
+      <workItem from="1681248803966" duration="45285000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681338725816</created>
@@ -138,7 +144,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681393255773</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update production api url">
+      <created>1681408834696</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681408834696</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update version">
+      <created>1681409082870</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681409082870</updated>
+    </task>
+    <task id="LOCAL-00012" summary="oops and package-lock">
+      <created>1681409094334</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681409094334</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +191,10 @@
     <MESSAGE value="update search query, add book image fallback" />
     <MESSAGE value="disable search while loading responses" />
     <MESSAGE value="add search progress indicator" />
-    <option name="LAST_COMMIT_MESSAGE" value="add search progress indicator" />
+    <MESSAGE value="update production api url" />
+    <MESSAGE value="update version" />
+    <MESSAGE value="oops and package-lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="oops and package-lock" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
