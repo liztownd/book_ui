@@ -1,7 +1,7 @@
 # My bookshelf
 
 > A personal bookshelf powered by Google Books API.
-> A user can create an account, save books to their private shelf, mark them as read or unread, filter, and rate their favorite books! User preferences and books are saved in a mySQL database through the Ruby on Rails API backend (see below for details).
+> A user can create an account, save books to their private shelf, mark them as read or unread, filter, and rate their favorite books! User preferences and books are saved in a postgres database through the Ruby on Rails API backend (see below for details).
 
 After logging in the user is directed to their bookshelf. If no books are yet saved, they are met with a prompt and a link to the search page. Upon searching, the user is presented with a list of books matching the query (limit 10) with a handy-dandy link to add the book to your shelf, or view the page on the web (external link).
 
