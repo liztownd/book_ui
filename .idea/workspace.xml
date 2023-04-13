@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="update search query, add book image fallback">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" afterDir="false" />
+    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="disable search while loading responses">
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/BooksSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/BooksSearch.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <workItem from="1681133831850" duration="50000" />
       <workItem from="1681133922406" duration="32843000" />
       <workItem from="1681233469943" duration="9070000" />
-      <workItem from="1681248803966" duration="43614000" />
+      <workItem from="1681248803966" duration="43696000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681338725816</created>
@@ -124,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681393040354</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="disable search while loading responses">
+      <created>1681393170344</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681393170344</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +153,8 @@
     <MESSAGE value="add html parser, missing key, update nav link design" />
     <MESSAGE value="update README, add images" />
     <MESSAGE value="update search query, add book image fallback" />
-    <option name="LAST_COMMIT_MESSAGE" value="update search query, add book image fallback" />
+    <MESSAGE value="disable search while loading responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="disable search while loading responses" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

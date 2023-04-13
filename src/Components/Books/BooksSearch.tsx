@@ -13,14 +13,14 @@ import BookDisplay from "./components/BookDisplay";
 import { AppRouteBooksSearch } from "../../AppRoutes";
 import Search from "./components/Search";
 import BookDialog from "./components/BookDialog";
-import { Card, Typography } from "@mui/material";
+import { Card, LinearProgress, Typography } from "@mui/material";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import { makeStyles } from "tss-react/mui";
 
 interface Props {}
 
 const BooksSearch: FunctionComponent<Props> = () => {
-  const { setSelectedBook, bookSearch, searchResults } =
+  const { setSelectedBook, bookSearch, searchResults, isSearchLoading } =
     useContext(BooksContext);
 
   const { classes } = useStyles();
@@ -69,6 +69,7 @@ const BooksSearch: FunctionComponent<Props> = () => {
         setPublisher={setPublisher}
       />
       <hr />
+      {isSearchLoading && <LinearProgress color={"secondary"} />}
       {searchResults?.length ? (
         searchResults.map((book, index) => (
           <React.Fragment key={book.id}>
