@@ -30,8 +30,8 @@ export default HeaderLink;
 
 const useStyles = makeStyles({ name: "HeaderLink" })((theme) => ({
   link: {
-    height: theme.spacing(6),
-    width: theme.spacing(6),
+    height: theme.spacing(7),
+    width: theme.spacing(7),
     borderRadius: 50,
     display: "flex",
     justifyContent: "center",
@@ -39,5 +39,6 @@ const useStyles = makeStyles({ name: "HeaderLink" })((theme) => ({
   },
   isSelected: {
     // backgroundColor: theme.palette.primary.light,
+    border: `1px solid ${theme.palette.primary.main}`,
   },
 }));

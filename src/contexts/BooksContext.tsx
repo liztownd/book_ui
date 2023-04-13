@@ -63,7 +63,6 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
     }).then((res) => {
       return res.json();
     });
-    console.info({ response });
     setUserBooks(
       response.filter((book: IUserBook) => book.user_id === user?.id)
     );
@@ -100,7 +99,7 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
         setUserBooks(updatedBooks);
       }
     } catch (error) {
-      console.info(error);
+      console.error(error);
     }
   };
 
@@ -116,7 +115,7 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
       const updatedBooks = clonedBooks.filter((book) => book.id !== id);
       setUserBooks(updatedBooks);
     } catch (error) {
-      console.info(error);
+      console.error(error);
     }
   };
 
@@ -143,7 +142,7 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
         setUserBooks(clonedBooks);
       }
     } catch (error) {
-      console.info(error);
+      console.error(error);
     }
   };
 
@@ -170,7 +169,7 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
         setUserBooks(clonedBooks);
       }
     } catch (error) {
-      console.info(error);
+      console.error(error);
     }
   };
 
@@ -211,7 +210,6 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
       authorQuery +
       publisherQuery;
 
-    console.info({ query });
     try {
       const response = await fetch(query, {
         method: "GET",
@@ -219,7 +217,6 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
         return res.json();
       });
       const books = await Promise.resolve(response);
-
       setSearchResults(books.totalItems === 0 ? [] : books.items);
     } catch (error) {
       console.error(error);

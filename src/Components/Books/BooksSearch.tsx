@@ -71,15 +71,14 @@ const BooksSearch: FunctionComponent<Props> = () => {
       <hr />
       {searchResults?.length ? (
         searchResults.map((book, index) => (
-          <>
+          <React.Fragment key={book.id}>
             <BookDisplay
               bookDetails={book}
               index={index}
-              key={book.id}
               handleClick={handleClick}
             />
             <hr />
-          </>
+          </React.Fragment>
         ))
       ) : (
         <Card className={classes.noResults}>

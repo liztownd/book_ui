@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import { makeStyles } from "tss-react/mui";
+import ReactHtmlParser from "react-html-parser";
 import { BooksContext, IUserBook } from "../../../contexts/BooksContext";
 import ReadChip from "./ReadChip";
 import LaunchIcon from "@mui/icons-material/Launch";
@@ -83,9 +84,16 @@ const BookDialog: React.FunctionComponent<Props> = ({
                   <Typography>
                     {selectedBook?.volumeInfo.authors.join(",")}
                   </Typography>
-                  <Typography variant={"body1"}>
-                    {selectedBook?.volumeInfo.description || ""}
-                  </Typography>
+                  {selectedBook?.volumeInfo.description.startsWith(`<`) ? (
+                    <div>
+                      {ReactHtmlParser(selectedBook?.volumeInfo.description)}
+                    </div>
+                  ) : (
+                    <Typography variant={"body1"}>
+                      {selectedBook?.volumeInfo.description || ""}
+                    </Typography>
+                  )}
+
                   <Typography variant={"subtitle2"}>
                     {selectedBook?.volumeInfo.publishedDate || ""}
                   </Typography>

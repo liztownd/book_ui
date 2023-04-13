@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="update README, rename project">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="update README">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/BooksSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/BooksSearch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/components/HeaderLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/components/HeaderLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +74,7 @@
       <workItem from="1681133831850" duration="50000" />
       <workItem from="1681133922406" duration="32843000" />
       <workItem from="1681233469943" duration="9070000" />
-      <workItem from="1681248803966" duration="36076000" />
+      <workItem from="1681248803966" duration="39056000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681338725816</created>
@@ -90,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681346450726</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update README">
+      <created>1681346547475</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681346547475</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,9 +123,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <MESSAGE value="update README" />
     <MESSAGE value="update README, rename project" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README, rename project" />
+    <MESSAGE value="update README" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

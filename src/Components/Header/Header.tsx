@@ -32,6 +32,7 @@ const Header: React.FunctionComponent<Props> = ({ title, icon }) => {
               color={
                 location.pathname.includes("manage") ? "secondary" : "primary"
               }
+              className={classes.linkIcon}
             />
           }
           isSelected={location.pathname.includes("manage")}
@@ -46,6 +47,7 @@ const Header: React.FunctionComponent<Props> = ({ title, icon }) => {
               color={
                 location.pathname.includes("search") ? "secondary" : "primary"
               }
+              className={classes.linkIcon}
             />
           }
           isSelected={location.pathname.includes("search")}
@@ -72,7 +74,8 @@ const useStyles = makeStyles({ name: "Header" })((theme) => ({
     alignItems: "center",
   },
   linkIcon: {
-    height: theme.spacing(4),
-    width: theme.spacing(4),
+    padding: 0,
+    marginTop: -4,
+    marginRight: -3,
   },
 }));
