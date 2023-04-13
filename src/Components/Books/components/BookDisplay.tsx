@@ -9,6 +9,7 @@ import {
 import LaunchIcon from "@mui/icons-material/Launch";
 import ReadChip from "./ReadChip";
 import Rating from "./RatingStars/Rating";
+import genericBook from "../../../assets/genericBook.png";
 
 interface Props {
   bookDetails: IGoogleBook;
@@ -27,15 +28,15 @@ const BookDisplay: React.FunctionComponent<Props> = ({
   const userBook = inUserList(bookDetails.id);
 
   const userBookInput: Partial<IUserBook> = {
-    book_id: bookDetails?.id,
-    title: bookDetails?.volumeInfo.title,
-    subtitle: bookDetails?.volumeInfo.subtitle,
-    authors: bookDetails?.volumeInfo.authors.join(","),
-    publishedDate: bookDetails?.volumeInfo.publishedDate,
-    description: bookDetails?.volumeInfo.description,
-    smallThumbnail: bookDetails?.volumeInfo.imageLinks.smallThumbnail,
-    thumbnail: bookDetails?.volumeInfo.imageLinks.thumbnail,
-    infoLink: bookDetails?.volumeInfo.infoLink,
+    book_id: bookDetails?.id || "",
+    title: bookDetails?.volumeInfo?.title || "",
+    subtitle: bookDetails?.volumeInfo?.subtitle || "",
+    authors: bookDetails?.volumeInfo?.authors?.join(",") || "",
+    publishedDate: bookDetails?.volumeInfo?.publishedDate || "",
+    description: bookDetails?.volumeInfo?.description || "",
+    smallThumbnail: bookDetails?.volumeInfo?.imageLinks?.smallThumbnail || "",
+    thumbnail: bookDetails?.volumeInfo?.imageLinks?.thumbnail || "",
+    infoLink: bookDetails?.volumeInfo?.infoLink || "",
     read: false,
     rating: 0,
   };
@@ -45,8 +46,10 @@ const BookDisplay: React.FunctionComponent<Props> = ({
       <Grid container direction={"row"} spacing={3}>
         <Grid item sm={12} md={2}>
           <img
-            src={bookDetails.volumeInfo.imageLinks.smallThumbnail || ""}
-            alt={bookDetails.volumeInfo.title}
+            src={
+              bookDetails?.volumeInfo?.imageLinks?.smallThumbnail || genericBook
+            }
+            alt={bookDetails?.volumeInfo?.title}
             className={classes.image}
           />
         </Grid>
@@ -54,25 +57,25 @@ const BookDisplay: React.FunctionComponent<Props> = ({
           <Grid container direction={"column"}>
             <Grid item>
               <Typography variant={"h5"} color={"primary"} gutterBottom>
-                {bookDetails.volumeInfo.title || ""}
-                {bookDetails.volumeInfo.subtitle
-                  ? `: ${bookDetails.volumeInfo.subtitle}`
+                {bookDetails?.volumeInfo?.title || ""}
+                {bookDetails?.volumeInfo?.subtitle
+                  ? `: ${bookDetails?.volumeInfo?.subtitle}`
                   : ""}
               </Typography>
             </Grid>
             <Grid item>
               <Typography gutterBottom>
-                {bookDetails.volumeInfo.authors.join(", ")}
+                {bookDetails?.volumeInfo?.authors?.join(", ")}
               </Typography>
             </Grid>
             <Grid item>
               <div className={classes.descriptionContainer}>
-                {bookDetails.volumeInfo.description || ""}
+                {bookDetails?.volumeInfo?.description || ""}
               </div>
             </Grid>
             <Grid item>
               <Typography variant={"subtitle2"} gutterBottom>
-                Published: {bookDetails.volumeInfo.publishedDate || ""}
+                Published: {bookDetails?.volumeInfo?.publishedDate || ""}
               </Typography>
             </Grid>
             <Grid item>
@@ -123,7 +126,7 @@ const BookDisplay: React.FunctionComponent<Props> = ({
                 <Grid item>
                   <Button title="View on web">
                     <a
-                      href={bookDetails.volumeInfo.infoLink}
+                      href={bookDetails?.volumeInfo?.infoLink}
                       target="_blank"
                       rel="noreferrer"
                     >

@@ -57,15 +57,13 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
   }, [user]);
 
   const getUserBooksList = async () => {
-    const url = `${apiBaseUrl}/books`;
+    const url = `${apiBaseUrl}/books/?user_id=${user?.id.toString()}`;
     const response = await fetch(url, {
       method: "GET",
     }).then((res) => {
       return res.json();
     });
-    setUserBooks(
-      response.filter((book: IUserBook) => book.user_id === user?.id)
-    );
+    setUserBooks(response);
   };
 
   // As soon as the user signs in, get their book list
@@ -183,7 +181,6 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
       );
       const book = await Promise.resolve(response);
       setSelectedBook(book);
-      // return book.item;
     } catch (error) {
       console.error(error);
     }
@@ -275,71 +272,71 @@ export interface ISearchParams {
 }
 
 export interface IGoogleBook {
-  kind: string;
+  kind?: string;
   id: string;
-  etag: string;
-  selfLink: string;
-  volumeInfo: {
-    title: string;
-    subtitle: string;
-    authors: string[];
-    publishedDate: string;
-    description: string;
-    industryIdentifiers: [
+  etag?: string;
+  selfLink?: string;
+  volumeInfo?: {
+    title?: string;
+    subtitle?: string;
+    authors?: string[];
+    publishedDate?: string;
+    description?: string;
+    industryIdentifiers?: [
       {
-        type: string;
-        identifier: string;
+        type?: string;
+        identifier?: string;
       },
       {
-        type: string;
-        identifier: string;
+        type?: string;
+        identifier?: string;
       }
     ];
-    readingModes: {
-      text: boolean;
-      image: boolean;
+    readingModes?: {
+      text?: boolean;
+      image?: boolean;
     };
-    pageCount: number;
-    printType: string;
-    categories: string[];
-    maturityRating: string;
-    allowAnonLogging: boolean;
-    contentVersion: string;
-    panelizationSummary: {
-      containsEpubBubbles: boolean;
-      containsImageBubbles: boolean;
+    pageCount?: number;
+    printType?: string;
+    categories?: string[];
+    maturityRating?: string;
+    allowAnonLogging?: boolean;
+    contentVersion?: string;
+    panelizationSummary?: {
+      containsEpubBubbles?: boolean;
+      containsImageBubbles?: boolean;
     };
-    imageLinks: {
-      smallThumbnail: string;
-      thumbnail: string;
+    imageLinks?: {
+      smallThumbnail?: string;
+      thumbnail?: string;
     };
-    language: string;
-    previewLink: string;
-    infoLink: string;
-    canonicalVolumeLink: string;
+    language?: string;
+    previewLink?: string;
+    infoLink?: string;
+    canonicalVolumeLink?: string;
   };
-  saleInfo: {
-    country: string;
-    saleability: string;
-    isEbook: boolean;
+  saleInfo?: {
+    country?: string;
+    saleability?: string;
+    isEbook?: boolean;
   };
-  accessInfo: {
-    country: string;
-    viewability: string;
-    embeddable: boolean;
-    publicDomain: boolean;
-    textToSpeechPermission: string;
-    epub: {
-      isAvailable: boolean;
+  accessInfo?: {
+    country?: string;
+    viewability?: string;
+    embeddable?: boolean;
+    publicDomain?: boolean;
+    textToSpeechPermission?: string;
+    epub?: {
+      isAvailable?: boolean;
     };
-    pdf: {
-      isAvailable: boolean;
+    pdf?: {
+      isAvailable?: boolean;
     };
-    webReaderLink: string;
-    accessViewStatus: string;
-    quoteSharingAllowed: boolean;
+    webReaderLink?: string;
+    accessViewStatus?: string;
+    quoteSharingAllowed?: boolean;
   };
-  searchInfo: {
-    textSnippet: string;
+  searchInfo?: {
+    textSnippet?: string;
   };
 }

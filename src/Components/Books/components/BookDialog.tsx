@@ -17,6 +17,7 @@ import { BooksContext, IUserBook } from "../../../contexts/BooksContext";
 import ReadChip from "./ReadChip";
 import LaunchIcon from "@mui/icons-material/Launch";
 import Rating from "./RatingStars/Rating";
+import genericBook from "../../../assets/genericBook.png";
 
 interface Props {
   isBookDialogOpen: boolean;
@@ -34,15 +35,15 @@ const BookDialog: React.FunctionComponent<Props> = ({
   const userBook = inUserList(selectedBook?.id || "");
 
   const userBookInput: Partial<IUserBook> = {
-    book_id: selectedBook?.id,
-    title: selectedBook?.volumeInfo.title,
-    subtitle: selectedBook?.volumeInfo.subtitle,
-    authors: selectedBook?.volumeInfo.authors.join(","),
-    publishedDate: selectedBook?.volumeInfo.publishedDate,
-    description: selectedBook?.volumeInfo.description,
-    smallThumbnail: selectedBook?.volumeInfo.imageLinks.smallThumbnail,
-    thumbnail: selectedBook?.volumeInfo.imageLinks.thumbnail,
-    infoLink: selectedBook?.volumeInfo.infoLink,
+    book_id: selectedBook?.id || "",
+    title: selectedBook?.volumeInfo?.title || "",
+    subtitle: selectedBook?.volumeInfo?.subtitle || "",
+    authors: selectedBook?.volumeInfo?.authors?.join(",") || "",
+    publishedDate: selectedBook?.volumeInfo?.publishedDate || "",
+    description: selectedBook?.volumeInfo?.description || "",
+    smallThumbnail: selectedBook?.volumeInfo?.imageLinks?.smallThumbnail || "",
+    thumbnail: selectedBook?.volumeInfo?.imageLinks?.thumbnail || "",
+    infoLink: selectedBook?.volumeInfo?.infoLink || "",
     read: false,
     rating: 0,
   };
@@ -52,7 +53,7 @@ const BookDialog: React.FunctionComponent<Props> = ({
       {selectedBook && (
         <>
           <DialogTitle className={classes.title}>
-            {selectedBook?.volumeInfo.title}
+            {selectedBook?.volumeInfo?.title}
             <IconButton
               title="Close dialog"
               onClick={() => setIsBookDialogOpen(false)}
@@ -65,37 +66,40 @@ const BookDialog: React.FunctionComponent<Props> = ({
               <Grid container direction={"column"} spacing={3}>
                 <Grid item>
                   <img
-                    src={selectedBook?.volumeInfo.imageLinks.thumbnail || ""}
-                    alt={selectedBook?.volumeInfo.title}
+                    src={
+                      selectedBook?.volumeInfo?.imageLinks?.thumbnail ||
+                      genericBook
+                    }
+                    alt={selectedBook?.volumeInfo?.title}
                     className={classes.image}
                   />
                 </Grid>
                 <Grid item>
                   <a
-                    href={selectedBook?.volumeInfo.infoLink}
+                    href={selectedBook?.volumeInfo?.infoLink}
                     target="_blank"
                     rel="noreferrer"
                     className={classes.link}
                   >
                     <Typography variant={"h6"}>
-                      {selectedBook?.volumeInfo.title || ""}
+                      {selectedBook?.volumeInfo?.title || ""}
                     </Typography>
                   </a>
                   <Typography>
-                    {selectedBook?.volumeInfo.authors.join(",")}
+                    {selectedBook?.volumeInfo?.authors?.join(",")}
                   </Typography>
-                  {selectedBook?.volumeInfo.description.startsWith(`<`) ? (
+                  {selectedBook?.volumeInfo?.description?.startsWith(`<`) ? (
                     <div>
-                      {ReactHtmlParser(selectedBook?.volumeInfo.description)}
+                      {ReactHtmlParser(selectedBook?.volumeInfo?.description)}
                     </div>
                   ) : (
                     <Typography variant={"body1"}>
-                      {selectedBook?.volumeInfo.description || ""}
+                      {selectedBook?.volumeInfo?.description || ""}
                     </Typography>
                   )}
 
                   <Typography variant={"subtitle2"}>
-                    {selectedBook?.volumeInfo.publishedDate || ""}
+                    {selectedBook?.volumeInfo?.publishedDate || ""}
                   </Typography>
                 </Grid>
               </Grid>
@@ -134,7 +138,7 @@ const BookDialog: React.FunctionComponent<Props> = ({
               <Grid item>
                 <Button title="View on web">
                   <a
-                    href={selectedBook.volumeInfo.infoLink}
+                    href={selectedBook?.volumeInfo?.infoLink}
                     target="_blank"
                     rel="noreferrer"
                   >

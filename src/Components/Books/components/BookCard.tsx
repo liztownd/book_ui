@@ -5,6 +5,7 @@ import { makeStyles } from "tss-react/mui";
 import { Typography } from "@mui/material";
 import ReadChip from "./ReadChip";
 import Rating from "./RatingStars/Rating";
+import genericBook from "../../../assets/genericBook.png";
 
 interface Props {
   book: IUserBook;
@@ -21,7 +22,7 @@ const BookCard: React.FunctionComponent<Props> = ({ book, getDetails }) => {
       <CardContent>
         <Box className={classes.container}>
           <img
-            src={book.smallThumbnail || ""}
+            src={book.smallThumbnail || genericBook}
             alt={book.title}
             className={classes.image}
           />
