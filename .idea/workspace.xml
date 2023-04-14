@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="users">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="add loading spinners">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PageTitles/PageTitles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PageTitles/PageTitles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Welcome/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Welcome/Welcome.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681476060140</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add loading spinners">
+      <created>1681489089983</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681489089983</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +273,8 @@
     <MESSAGE value="remove fallback url" />
     <MESSAGE value="api url" />
     <MESSAGE value="users" />
-    <option name="LAST_COMMIT_MESSAGE" value="users" />
+    <MESSAGE value="add loading spinners" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loading spinners" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,6 +1,13 @@
 import React, { MouseEvent, useContext } from "react";
 import { BooksContext, IUserBook } from "../../../contexts/BooksContext";
-import { Box, Card, CardContent, CardHeader, Button } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  Button,
+  Grid,
+} from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { Typography } from "@mui/material";
 import ReadChip from "./ReadChip";
@@ -21,34 +28,38 @@ const BookCard: React.FunctionComponent<Props> = ({ book, getDetails }) => {
       <CardHeader>{book.title || ""}</CardHeader>
       <CardContent>
         <Box className={classes.container}>
-          <img
-            src={book.smallThumbnail || genericBook}
-            alt={book.title}
-            className={classes.image}
-          />
+          <Grid container direction={"row"}>
+            <Grid item xs={12} md={2}>
+              <img
+                src={book.smallThumbnail || genericBook}
+                alt={book.title}
+                className={classes.image}
+              />
+            </Grid>
 
-          <div className={classes.detailsContainer}>
-            <div>
-              <Typography variant={"h6"}>{book.title || ""}</Typography>
-              <Typography variant={"caption"}>{book.authors}</Typography>
-            </div>
-            <div className={classes.actionsContainer}>
-              <ReadChip id={book.id} status={book.read || false} />
-              <Rating rating={book.rating || 0} id={book.id} />
-              <Button
-                title="View details"
-                onClick={(event) => getDetails(event, book.book_id)}
-              >
-                Details
-              </Button>
-              <Button
-                title="Remove from shelf"
-                onClick={() => deleteBook(book.id)}
-              >
-                Remove
-              </Button>
-            </div>
-          </div>
+            <Grid item xs={12} md={10} className={classes.detailsContainer}>
+              <div>
+                <Typography variant={"h6"}>{book.title || ""}</Typography>
+                <Typography variant={"caption"}>{book.authors}</Typography>
+              </div>
+              <div className={classes.actionsContainer}>
+                <ReadChip id={book.id} status={book.read || false} />
+                <Rating rating={book.rating || 0} id={book.id} />
+                <Button
+                  title="View details"
+                  onClick={(event) => getDetails(event, book.book_id)}
+                >
+                  Details
+                </Button>
+                <Button
+                  title="Remove from shelf"
+                  onClick={() => deleteBook(book.id)}
+                >
+                  Remove
+                </Button>
+              </div>
+            </Grid>
+          </Grid>
         </Box>
       </CardContent>
     </Card>
@@ -66,10 +77,12 @@ const useStyles = makeStyles({ name: "BookCard" })((theme) => ({
   actionsContainer: {
     display: "flex",
     alignItems: "center",
+    gap: theme.spacing(2),
   },
   container: {
     display: "flex",
     margin: theme.spacing(2),
+    overflow: "auto",
   },
   image: {
     maxWidth: "100px",

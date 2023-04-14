@@ -39,9 +39,7 @@ const Welcome: FunctionComponent<Props> = () => {
   return (
     <PageContainer>
       <div className={classes.root}>
-        <div className={classes.header}>
-          <PageTitles title={"Welcome!"} />
-        </div>
+        <PageTitles title={"Welcome!"} />
         <div className={classes.splitLayoutContainer}>
           <form onSubmit={onSubmit} className={classes.loginContainer}>
             <Typography variant={"h6"}>Please log in.</Typography>
@@ -115,7 +113,8 @@ const useStyles = makeStyles({ name: "Welcome" })((theme) => ({
     justifyContent: "space-evenly",
     marginTop: theme.spacing(2),
     padding: theme.spacing(2),
-    minWidth: "400px",
+    width: "100%",
+    minWidth: "300px",
     height: "400px",
     border: `2px solid ${theme.palette.secondary.main}`,
     borderRadius: 20,

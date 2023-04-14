@@ -44,7 +44,7 @@ const BookDisplay: React.FunctionComponent<Props> = ({
   return (
     <Box className={classes.container}>
       <Grid container direction={"row"} spacing={3}>
-        <Grid item sm={12} md={2}>
+        <Grid item xs={12} md={2}>
           <img
             src={
               bookDetails?.volumeInfo?.imageLinks?.smallThumbnail || genericBook
@@ -53,9 +53,9 @@ const BookDisplay: React.FunctionComponent<Props> = ({
             className={classes.image}
           />
         </Grid>
-        <Grid item sm={12} md={10}>
-          <Grid container direction={"column"}>
-            <Grid item>
+        <Grid item xs={12} md={10}>
+          <Grid container direction={"column"} xs={12}>
+            <Grid item xs={12}>
               <Typography variant={"h5"} color={"primary"} gutterBottom>
                 {bookDetails?.volumeInfo?.title || ""}
                 {bookDetails?.volumeInfo?.subtitle
@@ -63,29 +63,29 @@ const BookDisplay: React.FunctionComponent<Props> = ({
                   : ""}
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item xs={12}>
               <Typography gutterBottom>
                 {bookDetails?.volumeInfo?.authors?.join(", ")}
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item xs={12}>
               <div className={classes.descriptionContainer}>
                 {bookDetails?.volumeInfo?.description || ""}
               </div>
             </Grid>
-            <Grid item>
+            <Grid item xs={12}>
               <Typography variant={"subtitle2"} gutterBottom>
                 Published: {bookDetails?.volumeInfo?.publishedDate || ""}
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item xs={12}>
               <Grid
                 container
                 spacing={1}
                 alignItems={"center"}
                 className={classes.actionContainer}
               >
-                <Grid item>
+                <Grid item xs={10}>
                   {userBook ? (
                     <div className={classes.userBookDiv}>
                       <ReadChip
@@ -147,6 +147,7 @@ export default BookDisplay;
 
 const useStyles = makeStyles({ name: "BookDisplay" })((theme) => ({
   container: {
+    width: "100%",
     margin: theme.spacing(2),
   },
   image: {

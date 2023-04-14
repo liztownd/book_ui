@@ -27,7 +27,7 @@ const useStyles = makeStyles({ name: "PageTitles" })((theme) => ({
     width: "100%",
     display: "flex",
     alignItems: "center",
-    marginBottom: theme.spacing(2),
+    margin: theme.spacing(2, 0),
   },
   icon: {
     marginRight: theme.spacing(2),
