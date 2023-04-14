@@ -16,7 +16,7 @@ import PageContainer from "../PageContainers/PageContainer";
 interface Props {}
 
 const Welcome: FunctionComponent<Props> = () => {
-  const { login, user } = useContext(UserContext);
+  const { login, user, isUserLoading } = useContext(UserContext);
   const { classes } = useStyles();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,7 +39,9 @@ const Welcome: FunctionComponent<Props> = () => {
   return (
     <PageContainer>
       <div className={classes.root}>
-        <PageTitles title={"Welcome!"} />
+        <div className={classes.header}>
+          <PageTitles title={"Welcome!"} />
+        </div>
         <div className={classes.splitLayoutContainer}>
           <form onSubmit={onSubmit} className={classes.loginContainer}>
             <Typography variant={"h6"}>Please log in.</Typography>
@@ -55,6 +57,7 @@ const Welcome: FunctionComponent<Props> = () => {
               onChange={(event) => setPassword(event.target.value)}
             />
             <Button
+              disabled={isUserLoading}
               title="Log in"
               type={"submit"}
               onClick={onSubmit}

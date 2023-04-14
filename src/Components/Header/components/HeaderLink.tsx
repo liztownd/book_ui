@@ -7,16 +7,19 @@ interface Props {
   linkTo: string;
   icon: React.ReactNode;
   isSelected: boolean;
+  title: string;
 }
 
 const HeaderLink: React.FunctionComponent<Props> = ({
   linkTo,
   icon,
   isSelected,
+  title,
 }) => {
   const { classes, cx } = useStyles();
   return (
     <IconButton
+      title={title}
       className={cx(classes.link, {
         [classes.isSelected]: isSelected,
       })}
