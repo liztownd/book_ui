@@ -17,7 +17,7 @@ export const UserContext = createContext<IUserContext>({} as IUserContext);
 interface Props {}
 
 export const Provider: FunctionComponent<Props> = ({ children }) => {
-  const apiBaseUrl = "http://localhost:3000/api/v1";
+  const apiBaseUrl = "https://thawing-sierra-15233.herokuapp.com/api/v1";
 
   const [user, setUser] = useState<IUser | undefined>();
 
