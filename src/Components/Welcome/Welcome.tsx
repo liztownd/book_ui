@@ -5,7 +5,7 @@ import {
   useContext,
   useEffect,
 } from "react";
-import { Button, TextField, Typography } from "@mui/material";
+import { Button, CircularProgress, TextField, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { makeStyles } from "tss-react/mui";
 import { UserContext } from "../../contexts/UserContext";
@@ -64,7 +64,11 @@ const Welcome: FunctionComponent<Props> = () => {
               variant={"contained"}
               color={"primary"}
             >
-              Log in
+              {isUserLoading ? (
+                <CircularProgress color={"secondary"} />
+              ) : (
+                "Log in"
+              )}
             </Button>
           </form>
           <div className={classes.textContainer}>

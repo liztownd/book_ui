@@ -4,7 +4,13 @@ import React, {
   SetStateAction,
   useContext,
 } from "react";
-import { Button, Grid, TextField, Typography } from "@mui/material";
+import {
+  Button,
+  CircularProgress,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import { BooksContext } from "../../../contexts/BooksContext";
 
@@ -89,7 +95,7 @@ const Search: React.FunctionComponent<Props> = ({
         onClick={(event) => onSubmit(event)}
         variant={"contained"}
       >
-        Search
+        {isSearchLoading ? <CircularProgress color={"secondary"} /> : "Search"}
       </Button>
     </form>
   );

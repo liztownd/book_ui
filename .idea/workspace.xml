@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="users">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/components/HeaderLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/components/HeaderLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Welcome/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Welcome/Welcome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/UserContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/UserContext.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
