@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="add loading spinners">
+    <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="better small size responsiveness">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookDisplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PageTitles/PageTitles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PageTitles/PageTitles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Welcome/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Welcome/Welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681489089983</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="better small size responsiveness">
+      <created>1681491074085</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681491074085</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +278,8 @@
     <MESSAGE value="api url" />
     <MESSAGE value="users" />
     <MESSAGE value="add loading spinners" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loading spinners" />
+    <MESSAGE value="better small size responsiveness" />
+    <option name="LAST_COMMIT_MESSAGE" value="better small size responsiveness" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

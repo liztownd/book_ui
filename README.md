@@ -31,7 +31,7 @@ The books displayed on the bookshelf are only summaries, with the title, author,
 
 For local development you must also run the Ruby on Rails API located at <a href="https://github.com/liztownd/books_on_rails">https://github.com/liztownd/books_on_rails</a>. Follow the instructions in that README to run locally.
 
-After installing dependencies, run `npm start` and navigate to <a href="http://localhost:4000/mybookshelf">http://localhost:400/mybookshelf0</a> to view the app.
+After installing dependencies, run `npm start` and navigate to <a href="http://localhost:4000/mybookshelf">http://localhost:4000/mybookshelf</a> to view the app.
 
 ## Deployment
 
