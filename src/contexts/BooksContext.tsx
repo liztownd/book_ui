@@ -24,8 +24,7 @@ export const BooksContext = createContext<IBooksContext>({} as IBooksContext);
 interface Props {}
 
 export const Provider: FunctionComponent<Props> = ({ children }) => {
-  const apiBaseUrl =
-    process.env.REACT_APP_API_BASE_URL || "http://localhost:3000/api/v1";
+  const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
   const googleApiUrl = "https://www.googleapis.com/books/v1/volumes";
 
   const { userId } = useParams();
