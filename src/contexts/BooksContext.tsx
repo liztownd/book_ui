@@ -24,7 +24,7 @@ export const BooksContext = createContext<IBooksContext>({} as IBooksContext);
 interface Props {}
 
 export const Provider: FunctionComponent<Props> = ({ children }) => {
-  const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+  const apiBaseUrl = "https://thawing-sierra-15233.herokuapp.com/api/v1";
   const googleApiUrl = "https://www.googleapis.com/books/v1/volumes";
 
   const { userId } = useParams();
