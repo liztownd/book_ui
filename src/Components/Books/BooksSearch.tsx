@@ -1,3 +1,6 @@
+"use client";
+
+import { ErrorBoundary } from "react-error-boundary";
 import React, {
   FormEventHandler,
   FunctionComponent,
@@ -57,43 +60,45 @@ const BooksSearch: FunctionComponent<Props> = () => {
         title={AppRouteBooksSearch.title}
         icon={<ManageSearchIcon fontSize={"large"} />}
       />
-      <Search
-        onSubmit={onSubmit}
-        keyword={keyword}
-        setKeyword={setKeyword}
-        author={author}
-        setAuthor={setAuthor}
-        title={title}
-        setTitle={setTitle}
-        publisher={publisher}
-        setPublisher={setPublisher}
-      />
-      <hr />
-      {isSearchLoading && <LinearProgress color={"secondary"} />}
-      {searchResults?.length ? (
-        searchResults.map((book, index) => (
-          <React.Fragment key={book.id}>
-            <BookDisplay
-              bookDetails={book}
-              index={index}
-              handleClick={handleClick}
-            />
-            <hr />
-          </React.Fragment>
-        ))
-      ) : (
-        <Card className={classes.noResults}>
-          <QueryStatsIcon color={"secondary"} fontSize={"large"} />
-          <Typography variant={"h6"}>
-            Oops! Looks like we didn't find any good matches for your search.
-            Please try again.
-          </Typography>
-        </Card>
-      )}
-      <BookDialog
-        isBookDialogOpen={isBookDialogOpen}
-        setIsBookDialogOpen={setIsBookDialogOpen}
-      />
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        <Search
+          onSubmit={onSubmit}
+          keyword={keyword}
+          setKeyword={setKeyword}
+          author={author}
+          setAuthor={setAuthor}
+          title={title}
+          setTitle={setTitle}
+          publisher={publisher}
+          setPublisher={setPublisher}
+        />
+        <hr />
+        {isSearchLoading && <LinearProgress color={"secondary"} />}
+        {searchResults?.length ? (
+          searchResults.map((book, index) => (
+            <React.Fragment key={book.id}>
+              <BookDisplay
+                bookDetails={book}
+                index={index}
+                handleClick={handleClick}
+              />
+              <hr />
+            </React.Fragment>
+          ))
+        ) : (
+          <Card className={classes.noResults}>
+            <QueryStatsIcon color={"secondary"} fontSize={"large"} />
+            <Typography variant={"h6"}>
+              Oops! Looks like we didn't find any good matches for your search.
+              Please try again.
+            </Typography>
+          </Card>
+        )}
+        <BookDialog
+          isBookDialogOpen={isBookDialogOpen}
+          setIsBookDialogOpen={setIsBookDialogOpen}
+        />
+      </ErrorBoundary>
     </PageContainer>
   );
 };

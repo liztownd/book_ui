@@ -1,3 +1,6 @@
+"use client";
+
+import { ErrorBoundary } from "react-error-boundary";
 import {
   FunctionComponent,
   FormEventHandler,
@@ -40,46 +43,48 @@ const Welcome: FunctionComponent<Props> = () => {
     <PageContainer>
       <div className={classes.root}>
         <PageTitles title={"Welcome!"} />
-        <div className={classes.splitLayoutContainer}>
-          <form onSubmit={onSubmit} className={classes.loginContainer}>
-            <Typography variant={"h6"}>Please log in.</Typography>
-            <TextField
-              label={"Email"}
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-            <TextField
-              label={"Password"}
-              value={password}
-              type={"password"}
-              onChange={(event) => setPassword(event.target.value)}
-            />
-            <Button
-              disabled={isUserLoading}
-              title="Log in"
-              type={"submit"}
-              onClick={onSubmit}
-              variant={"contained"}
-              color={"primary"}
-            >
-              {isUserLoading ? (
-                <CircularProgress color={"secondary"} />
-              ) : (
-                "Log in"
-              )}
-            </Button>
-          </form>
-          <div className={classes.textContainer}>
-            <Typography variant={"h6"} gutterBottom>
-              Welcome to my little app!
-            </Typography>
-            <Typography variant={"body1"}>
-              This is a book search and bookshelf where you can view, rate, and
-              save your favorite books. Log in at the left - don't worry, if you
-              don't have an account already we'll create one for you!
-            </Typography>
+        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+          <div className={classes.splitLayoutContainer}>
+            <form onSubmit={onSubmit} className={classes.loginContainer}>
+              <Typography variant={"h6"}>Please log in.</Typography>
+              <TextField
+                label={"Email"}
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
+              <TextField
+                label={"Password"}
+                value={password}
+                type={"password"}
+                onChange={(event) => setPassword(event.target.value)}
+              />
+              <Button
+                disabled={isUserLoading}
+                title="Log in"
+                type={"submit"}
+                onClick={onSubmit}
+                variant={"contained"}
+                color={"primary"}
+              >
+                {isUserLoading ? (
+                  <CircularProgress color={"secondary"} />
+                ) : (
+                  "Log in"
+                )}
+              </Button>
+            </form>
+            <div className={classes.textContainer}>
+              <Typography variant={"h6"} gutterBottom>
+                Welcome to my little app!
+              </Typography>
+              <Typography variant={"body1"}>
+                This is a book search and bookshelf where you can view, rate,
+                and save your favorite books. Log in at the left - don't worry,
+                if you don't have an account already we'll create one for you!
+              </Typography>
+            </div>
           </div>
-        </div>
+        </ErrorBoundary>
       </div>
     </PageContainer>
   );
