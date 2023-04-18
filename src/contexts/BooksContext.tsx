@@ -3,6 +3,7 @@ import { useCallback } from "react";
 import { FunctionComponent, createContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { UserContext } from "./UserContext";
+import { enqueueSnackbar } from "notistack";
 
 interface IBooksContext {
   userBooks: IUserBook[];
@@ -24,7 +25,9 @@ export const BooksContext = createContext<IBooksContext>({} as IBooksContext);
 interface Props {}
 
 export const Provider: FunctionComponent<Props> = ({ children }) => {
-  const apiBaseUrl = "https://thawing-sierra-15233.herokuapp.com/api/v1";
+  // const apiBaseUrl = "https://thawing-sierra-15233.herokuapp.com/api/v1";
+  const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+
   const googleApiUrl = "https://www.googleapis.com/books/v1/volumes";
 
   const { userId } = useParams();
@@ -41,13 +44,18 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
 
   const getUser = useCallback(async () => {
     const url = `${apiBaseUrl}/users/${userId}`;
-    const response = await fetch(url, {
-      method: "GET",
-    }).then((res) => {
-      return res.json();
-    });
+    try {
+      const response = await fetch(url, {
+        method: "GET",
+      }).then((res) => {
+        return res.json();
+      });
 
-    setUser({ email: response.email, id: response.id });
+      setUser({ email: response.email, id: response.id });
+    } catch (error) {
+      enqueueSnackbar({ variant: "error", message: error.message });
+      throw new Error(error);
+    }
   }, [user]);
 
   // Because we aren't using state instead of tokens or cookies, if the page is reloaded we have to get the user again
@@ -59,12 +67,17 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
 
   const getUserBooksList = async () => {
     const url = `${apiBaseUrl}/books/?user_id=${user?.id.toString()}`;
-    const response = await fetch(url, {
-      method: "GET",
-    }).then((res) => {
-      return res.json();
-    });
-    setUserBooks(response);
+    try {
+      const response = await fetch(url, {
+        method: "GET",
+      }).then((res) => {
+        return res.json();
+      });
+      setUserBooks(response);
+    } catch (error) {
+      enqueueSnackbar({ variant: "error", message: error.message });
+      throw new Error(error);
+    }
   };
 
   // As soon as the user signs in, get their book list
@@ -98,7 +111,8 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
         setUserBooks(updatedBooks);
       }
     } catch (error) {
-      console.error(error);
+      enqueueSnackbar({ variant: "error", message: error.message });
+      throw new Error(error);
     }
   };
 
@@ -114,7 +128,8 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
       const updatedBooks = clonedBooks.filter((book) => book.id !== id);
       setUserBooks(updatedBooks);
     } catch (error) {
-      console.error(error);
+      enqueueSnackbar({ variant: "error", message: error.message });
+      throw new Error(error);
     }
   };
 
@@ -141,7 +156,8 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
         setUserBooks(clonedBooks);
       }
     } catch (error) {
-      console.error(error);
+      enqueueSnackbar({ variant: "error", message: error.message });
+      throw new Error(error);
     }
   };
 
@@ -168,7 +184,8 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
         setUserBooks(clonedBooks);
       }
     } catch (error) {
-      console.error(error);
+      enqueueSnackbar({ variant: "error", message: error.message });
+      throw new Error(error);
     }
   };
 
@@ -183,7 +200,8 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
       const book = await Promise.resolve(response);
       setSelectedBook(book);
     } catch (error) {
-      console.error(error);
+      enqueueSnackbar({ variant: "error", message: error.message });
+      throw new Error(error);
     }
   };
 
@@ -217,7 +235,8 @@ export const Provider: FunctionComponent<Props> = ({ children }) => {
       const books = await Promise.resolve(response);
       setSearchResults(books.totalItems === 0 ? [] : books.items);
     } catch (error) {
-      console.error(error);
+      enqueueSnackbar({ variant: "error", message: error.message });
+      throw new Error(error);
     }
     setIsSearchLoading(false);
   };

@@ -1,3 +1,6 @@
+"use client";
+
+import { ErrorBoundary } from "react-error-boundary";
 import React, {
   FunctionComponent,
   MouseEvent,
@@ -72,75 +75,77 @@ const ManageBooks: FunctionComponent<Props> = () => {
   return (
     <PageContainer>
       <Header title={AppRouteManageBooks.title} />
-      {!userBooks.length ? (
-        <AddBookCard />
-      ) : (
-        <>
-          <div>
-            <IconButton
-              id="filter-button"
-              title="Filter"
-              aria-controls={open ? "filter-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-            >
-              <FilterAltIcon color={"secondary"} />
-            </IconButton>
-            <Menu
-              id="filter-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "filter-button",
-              }}
-            >
-              <MenuItem disabled={true}>Filter by:</MenuItem>
-              <MenuItem
-                onClick={() => {
-                  setFilterBy("read");
-                  handleClose();
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        {!userBooks.length ? (
+          <AddBookCard />
+        ) : (
+          <>
+            <div>
+              <IconButton
+                id="filter-button"
+                title="Filter"
+                aria-controls={open ? "filter-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+              >
+                <FilterAltIcon color={"secondary"} />
+              </IconButton>
+              <Menu
+                id="filter-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                  "aria-labelledby": "filter-button",
                 }}
               >
-                <ListItemIcon>
-                  <MenuBookIcon fontSize={"small"} />
-                </ListItemIcon>
-                <ListItemText>Read</ListItemText>
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  setFilterBy("unread");
-                  handleClose();
-                }}
-              >
-                <ListItemIcon>
-                  <CollectionsBookmarkIcon fontSize={"small"} />
-                </ListItemIcon>
-                <ListItemText>Unread</ListItemText>
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  setFilterBy(undefined);
-                  handleClose();
-                }}
-              >
-                <ListItemIcon>
-                  <FilterAltOffIcon fontSize={"small"} />
-                </ListItemIcon>
-                <ListItemText>Clear filters</ListItemText>
-              </MenuItem>
-            </Menu>
-          </div>
-          {filteredBooks.map((book) => (
-            <BookCard book={book} key={book.id} getDetails={getDetails} />
-          ))}
-        </>
-      )}
-      <BookDialog
-        isBookDialogOpen={isBookDialogOpen}
-        setIsBookDialogOpen={setIsBookDialogOpen}
-      />
+                <MenuItem disabled={true}>Filter by:</MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    setFilterBy("read");
+                    handleClose();
+                  }}
+                >
+                  <ListItemIcon>
+                    <MenuBookIcon fontSize={"small"} />
+                  </ListItemIcon>
+                  <ListItemText>Read</ListItemText>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    setFilterBy("unread");
+                    handleClose();
+                  }}
+                >
+                  <ListItemIcon>
+                    <CollectionsBookmarkIcon fontSize={"small"} />
+                  </ListItemIcon>
+                  <ListItemText>Unread</ListItemText>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    setFilterBy(undefined);
+                    handleClose();
+                  }}
+                >
+                  <ListItemIcon>
+                    <FilterAltOffIcon fontSize={"small"} />
+                  </ListItemIcon>
+                  <ListItemText>Clear filters</ListItemText>
+                </MenuItem>
+              </Menu>
+            </div>
+            {filteredBooks.map((book) => (
+              <BookCard book={book} key={book.id} getDetails={getDetails} />
+            ))}
+          </>
+        )}
+        <BookDialog
+          isBookDialogOpen={isBookDialogOpen}
+          setIsBookDialogOpen={setIsBookDialogOpen}
+        />
+      </ErrorBoundary>
     </PageContainer>
   );
 };
