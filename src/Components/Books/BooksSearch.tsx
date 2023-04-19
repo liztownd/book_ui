@@ -108,10 +108,9 @@ export default BooksSearch;
 const useStyles = makeStyles({ name: "BookSearch" })((theme) => ({
   noResults: {
     display: "flex",
-    alignItems: "center",
     justifyContent: "center",
     gap: theme.spacing(3),
     marginTop: theme.spacing(3),
-    height: theme.spacing(20),
+    padding: theme.spacing(4, 2),
   },
 }));
