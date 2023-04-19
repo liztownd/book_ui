@@ -87,7 +87,13 @@ const BookDisplay: React.FunctionComponent<Props> = ({
               >
                 <Grid item xs={10}>
                   {userBook ? (
-                    <div className={classes.userBookDiv}>
+                    <Box
+                      sx={{
+                        flexDirection: { xs: "column", md: "row" },
+                        alignItems: { xs: "flex-start", md: "center" },
+                      }}
+                      className={classes.userBookDiv}
+                    >
                       <ReadChip
                         id={userBook.id}
                         status={Boolean(userBook?.read)}
@@ -100,7 +106,7 @@ const BookDisplay: React.FunctionComponent<Props> = ({
                       >
                         Remove from shelf
                       </Button>
-                    </div>
+                    </Box>
                   ) : (
                     <Button
                       title="Add to shelf"

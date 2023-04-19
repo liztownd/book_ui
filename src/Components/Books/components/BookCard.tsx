@@ -42,7 +42,13 @@ const BookCard: React.FunctionComponent<Props> = ({ book, getDetails }) => {
                 <Typography variant={"h6"}>{book.title || ""}</Typography>
                 <Typography variant={"caption"}>{book.authors}</Typography>
               </div>
-              <div className={classes.actionsContainer}>
+              <Box
+                sx={{
+                  flexDirection: { xs: "column", md: "row" },
+                  alignItems: { xs: "flex-start", md: "center" },
+                }}
+                className={classes.actionsContainer}
+              >
                 <ReadChip id={book.id} status={book.read || false} />
                 <Rating rating={book.rating || 0} id={book.id} />
                 <Button
@@ -57,7 +63,7 @@ const BookCard: React.FunctionComponent<Props> = ({ book, getDetails }) => {
                 >
                   Remove
                 </Button>
-              </div>
+              </Box>
             </Grid>
           </Grid>
         </Box>
@@ -76,8 +82,8 @@ const useStyles = makeStyles({ name: "BookCard" })((theme) => ({
   },
   actionsContainer: {
     display: "flex",
-    alignItems: "center",
-    gap: theme.spacing(2),
+    marginTop: theme.spacing(1),
+    gap: theme.spacing(1),
   },
   container: {
     display: "flex",

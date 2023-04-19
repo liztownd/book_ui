@@ -5,6 +5,7 @@ import React, {
   useContext,
 } from "react";
 import {
+  Box,
   Button,
   CircularProgress,
   Grid,
@@ -43,7 +44,13 @@ const Search: React.FunctionComponent<Props> = ({
     <form onSubmit={(event) => onSubmit(event)}>
       <Grid container spacing={3} className={classes.fieldContainer}>
         <Grid item xs={12} lg={6}>
-          <div className={classes.fieldDiv}>
+          <Box
+            sx={{
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: { xs: "flex-start", md: "center" },
+            }}
+            className={classes.fieldDiv}
+          >
             <Typography className={classes.label}>Keyword: </Typography>
             <TextField
               className={classes.textField}
@@ -51,10 +58,16 @@ const Search: React.FunctionComponent<Props> = ({
               label={"Keyword"}
               onChange={(event) => setKeyword(event.target.value)}
             />
-          </div>
+          </Box>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <div className={classes.fieldDiv}>
+          <Box
+            sx={{
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: { xs: "flex-start", md: "center" },
+            }}
+            className={classes.fieldDiv}
+          >
             <Typography className={classes.label}>Title: </Typography>
             <TextField
               className={classes.textField}
@@ -62,10 +75,16 @@ const Search: React.FunctionComponent<Props> = ({
               label={"Title"}
               onChange={(event) => setTitle(event.target.value)}
             />
-          </div>
+          </Box>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <div className={classes.fieldDiv}>
+          <Box
+            sx={{
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: { xs: "flex-start", md: "center" },
+            }}
+            className={classes.fieldDiv}
+          >
             <Typography className={classes.label}>Author: </Typography>
             <TextField
               className={classes.textField}
@@ -73,10 +92,16 @@ const Search: React.FunctionComponent<Props> = ({
               label={"Author"}
               onChange={(event) => setAuthor(event.target.value)}
             />
-          </div>
+          </Box>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <div className={classes.fieldDiv}>
+          <Box
+            sx={{
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: { xs: "flex-start", md: "center" },
+            }}
+            className={classes.fieldDiv}
+          >
             <Typography className={classes.label}>Publisher: </Typography>
             <TextField
               className={classes.textField}
@@ -84,7 +109,7 @@ const Search: React.FunctionComponent<Props> = ({
               label={"Publisher"}
               onChange={(event) => setPublisher(event.target.value)}
             />
-          </div>
+          </Box>
         </Grid>
       </Grid>
       <Button
@@ -107,13 +132,15 @@ const useStyles = makeStyles({ name: "BookSearch" })((theme) => ({
   fieldDiv: {
     width: "90%",
     display: "flex",
-    alignItems: "center",
+    // alignItems: "flex-start",
     justifyContent: "flex-start",
   },
   label: {
+    justifyContent: "flex-start",
     width: "15%",
   },
   textField: {
+    width: "100%",
     flexGrow: 1,
   },
   fieldContainer: {

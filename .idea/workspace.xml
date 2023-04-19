@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a3980a17-735a-4b1c-8e31-4c8d2fa2b0c6" name="Changes" comment="update README">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppRoutes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Books/BooksSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/BooksSearch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Books/ManageBooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/ManageBooks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Welcome/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Welcome/Welcome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/BooksContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/UserContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/UserContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/BookDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/BookDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Books/components/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,13 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
   </component>
   <component name="JsBowerSettings">
     <bower-package value="" />
